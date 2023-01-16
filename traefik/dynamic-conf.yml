@@ -1,0 +1,16 @@
+http:
+  services:
+    flask:
+      loadBalancer:
+        servers:
+        - url: "http://flask:3000"
+  routers:
+    auth:
+      rule: "Path(`/`)"
+      service: flask
+      middlewares:
+        - auth
+  middlewares:
+    auth:
+      forwardAuth:
+        address: https://www.google.com/

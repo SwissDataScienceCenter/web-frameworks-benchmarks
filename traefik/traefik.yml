@@ -1,0 +1,9 @@
+entryPoints:
+  http:
+    address: ":80"
+providers:
+  file:
+    filename: "/dynamic-conf.yml"
+api:
+  debug: true
+accessLog: {}

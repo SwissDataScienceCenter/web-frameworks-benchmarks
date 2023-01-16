@@ -1,0 +1,43 @@
+services:
+  traefik:
+    build:
+      context: traefik
+      dockerfile: Dockerfile
+    ports: 
+      - '3000:80'
+  flask:
+    build:
+      context: flask
+      dockerfile: Dockerfile
+    ports: 
+      - '3001:3000'
+  nodejs:
+    build:
+      context: nodejs
+      dockerfile: Dockerfile
+    ports: 
+      - '3002:3000'
+  go:
+    build:
+      context: go
+      dockerfile: Dockerfile
+    ports: 
+      - '3003:3000'
+  fastapi:
+    build:
+      context: fastapi
+      dockerfile: Dockerfile
+    ports: 
+      - '3004:3000'
+  goproxy:
+    build:
+      context: goproxy
+      dockerfile: Dockerfile
+    ports: 
+      - '3005:3000'
+  nodejsproxy:
+    build:
+      context: nodejsproxy
+      dockerfile: Dockerfile
+    ports: 
+      - '3006:3000'
