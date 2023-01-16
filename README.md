@@ -63,7 +63,7 @@ internal Python Flask service.
 * Same as above but with Go.
 
 ```
-Traefik
-Go
-Node
+Traefik     avg=247.46ms min=92.17ms med=253.13ms max=384.02ms p(90)=315.34ms p(95)=327.06ms
+Go          avg=246.78ms min=98ms    med=236.61ms max=476.72ms p(90)=376.7ms  p(95)=414.38ms
+Node        avg=741.14ms min=383.71ms med=709.15ms max=1.12s  p(90)=930.47ms p(95)=937.54ms
 ```
