@@ -10,6 +10,7 @@ packages = [{include = "quart_test"}]
 python = "^3.10"
 quart = "^0.18.3"
 hypercorn = "^0.14.3"
+redis = "^4.4.2"
 
 
 [build-system]

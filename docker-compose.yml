@@ -23,6 +23,9 @@ services:
       dockerfile: Dockerfile
     ports: 
       - '3001:3000'
+    depends_on:
+      - redis
+      - redis-init
   nodejs:
     env_file: .env
     build:
@@ -37,6 +40,9 @@ services:
       dockerfile: Dockerfile
     ports: 
       - '3003:3000'
+    depends_on:
+      - redis
+      - redis-init
   fastapi:
     env_file: .env
     build:
@@ -65,5 +71,8 @@ services:
       dockerfile: Dockerfile
     ports: 
       - '3007:3000'
+    depends_on:
+      - redis
+      - redis-init
 volumes:
   redis:
