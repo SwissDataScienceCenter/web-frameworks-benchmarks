@@ -36,6 +36,7 @@ and `uvicorn` workers respectively.
 * Best of 5 test runs based on average response time because rerunning the same tests
 showed some variability in the results.
 * Express.js was used in Node.
+* Echo is the framework used in the Go tests
 
 ## Proxying (to Traefik or not to Traefik)
 
@@ -66,4 +67,20 @@ internal Python Flask service.
 Traefik     avg=247.46ms min=92.17ms med=253.13ms max=384.02ms p(90)=315.34ms p(95)=327.06ms
 Go          avg=246.78ms min=98ms    med=236.61ms max=476.72ms p(90)=376.7ms  p(95)=414.38ms
 Node        avg=741.14ms min=383.71ms med=709.15ms max=1.12s  p(90)=930.47ms p(95)=937.54ms
+```
+
+## Accessing Redis then Sending Response
+
+This is similar to the "direct access" test. Except that instead of simply returning a string
+the servers query Redis for 3 keys and then return the results. The queries all happen
+sequentially.
+
+Also just to make sure there are enough resources for the tests and for now running Redis
+in Docker on top of all the other services I increased the resources for Docker to 4 cores
+and 8GB of RAM.
+
+```
+Flask       avg=81.56ms  min=15.2ms  med=90.64ms max=119.48ms p(90)=105.9ms  p(95)=111.94ms
+Quart       avg=73.7ms   min=27.17ms med=70.66ms  max=130.48ms p(90)=101.01ms p(95)=111.89ms
+Go          avg=43.45ms min=11.51ms med=41.99ms max=94.57ms  p(90)=78.72ms  p(95)=93.15ms
 ```
