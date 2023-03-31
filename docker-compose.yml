@@ -3,7 +3,7 @@ services:
     build:
       context: traefik
       dockerfile: Dockerfile
-    ports: 
+    ports:
       - '3000:80'
     env_file: .env
   redis:
@@ -21,7 +21,7 @@ services:
     build:
       context: flask
       dockerfile: Dockerfile
-    ports: 
+    ports:
       - '3001:3000'
     depends_on:
       - redis
@@ -31,14 +31,14 @@ services:
     build:
       context: nodejs
       dockerfile: Dockerfile
-    ports: 
+    ports:
       - '3002:3000'
   go:
     env_file: .env
     build:
       context: go
       dockerfile: Dockerfile
-    ports: 
+    ports:
       - '3003:3000'
     depends_on:
       - redis
@@ -48,29 +48,39 @@ services:
     build:
       context: fastapi
       dockerfile: Dockerfile
-    ports: 
+    ports:
       - '3004:3000'
   goproxy:
     env_file: .env
     build:
       context: goproxy
       dockerfile: Dockerfile
-    ports: 
+    ports:
       - '3005:3000'
   nodejsproxy:
     env_file: .env
     build:
       context: nodejsproxy
       dockerfile: Dockerfile
-    ports: 
+    ports:
       - '3006:3000'
   quart:
     env_file: .env
     build:
       context: quart
       dockerfile: Dockerfile
-    ports: 
+    ports:
       - '3007:3000'
+    depends_on:
+      - redis
+      - redis-init
+  sanic:
+    env_file: .env
+    build:
+      context: sanic
+      dockerfile: Dockerfile
+    ports:
+      - '3008:3000'
     depends_on:
       - redis
       - redis-init

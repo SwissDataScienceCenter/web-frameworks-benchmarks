@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sanic-test"
+version = "0.1.0"
+description = ""
+authors = ["Ralf Grubenmann <ralf.grubenmann@sdsc.ethz.ch>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sanic = "^23.3.0"
+redis = "^4.5.4"
+orjson = "^3.8.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
