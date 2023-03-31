@@ -17,7 +17,7 @@ will measure the latency of accessing a GET endpoint from a Go server.
 ## Direct access
 
 Direct access without a proxy. A simple GET endpoint that returns json with content
-`{"message": "Hello world"}`. 
+`{"message": "Hello world"}`.
 ```
 Go:         avg=21.36ms  min=5.86ms med=22.48ms max=38.27ms p(90)=31.95ms  p(95)=33.49ms
 Flask 12:   avg=47.61ms  min=15.56ms med=48.92ms max=77.26ms p(90)=62.86ms p(95)=64.62ms
@@ -26,6 +26,18 @@ Flask 4:    avg=40.28ms  min=13.2ms  med=42.11ms max=61.47ms p(90)=48.52ms  p(95
 Fastapi 4:  avg=81.38ms  min=15.63ms med=72.14ms max=189.26ms p(90)=151.35ms p(95)=166.01ms
 Node:       avg=42.94ms  min=1.63ms med=35.41ms max=108.94ms p(90)=73.01ms  p(95)=75.97ms
 ```
+
+Including Sanic, on Ralf's laptop:
+```
+Go:             avg=1.94ms  min=105.78µs med=1.7ms   max=28.56ms  p(90)=3.5ms    p(95)=4.03ms
+Sanic(w4):      avg=2.31ms  min=190.96µs med=1.99ms  max=5.87ms   p(90)=4.75ms   p(95)=5.38ms
+Sanic:          avg=2.42ms  min=120.16µs med=2ms     max=37.7ms  p(90)=4.29ms   p(95)=5.21ms
+Flask:          avg=9.97ms  min=2.42ms   med=9.16ms   max=25.6ms  p(90)=16.47ms p(95)=18.31ms
+FastAPI:        avg=36.68ms  min=1.75ms  med=42.32ms max=74.19ms p(90)=61.18ms  p(95)=66.81ms
+Quart:          avg=37.36ms  min=1.99ms med=39.35ms max=72.7ms  p(90)=61.51ms  p(95)=65.08ms
+```
+
+`Sanic(w4)` = with `--workers=4`, `Sanic` = with `--fast`
 
 Notes:
 
@@ -42,7 +54,7 @@ showed some variability in the results.
 
 This aims to answer the question of what happens if we do not use Traefik for proxying
 but rather depend on the reverse proxy functionality that Go and Node server frameworks
-and/or packages can provide. 
+and/or packages can provide.
 
 One of the reasons we use Traefik is for its [ForwardAuth middleware](https://doc.traefik.io/traefik/middlewares/http/forwardauth/).
 This allows us to specify a HTTP endpoint that Traefik calls whenever it proxies a request.
@@ -84,3 +96,13 @@ Flask       avg=81.56ms  min=15.2ms  med=90.64ms max=119.48ms p(90)=105.9ms  p(9
 Quart       avg=73.7ms   min=27.17ms med=70.66ms  max=130.48ms p(90)=101.01ms p(95)=111.89ms
 Go          avg=43.45ms min=11.51ms med=41.99ms max=94.57ms  p(90)=78.72ms  p(95)=93.15ms
 ```
+
+Including Sanic, on Ralf's laptop:
+```
+Go:             avg=4.26ms  min=392.21µs med=4.02ms  max=10.04ms  p(90)=6.57ms   p(95)=8.15ms
+Sanic:          avg=4.68ms  min=434.92µs med=3.77ms  max=17.69ms  p(90)=7.11ms   p(95)=8.57ms
+Sanic(w4):      avg=5.56ms  min=448.52µs med=5.77ms  max=10.63ms  p(90)=8.26ms   p(95)=10.13ms
+Flask:          avg=10.12ms  min=1.97ms  med=9.41ms   max=18.11ms p(90)=15.59ms  p(95)=16.57ms
+Quart:          avg=40.11ms  min=2.11ms  med=48.86ms max=72.53ms p(90)=65.4ms   p(95)=66.61ms
+```
+`Sanic(w4)` = with `--workers=4`, `Sanic` = with `--fast`
