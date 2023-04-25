@@ -43,7 +43,7 @@ val scalafixSettings = Seq(
 
 val root = project
   .in(file("."))
-  .enablePlugins(JavaServerAppPackaging)
+  .enablePlugins(JavaServerAppPackaging, GraalVMNativeImagePlugin)
   .settings(sharedSettings)
   .settings(scalafixSettings)
   .settings(
@@ -53,5 +53,14 @@ val root = project
         Dependencies.circe ++
         Dependencies.ciris ++
         Dependencies.scribe ++
-        Dependencies.redis4Cats
+        Dependencies.redis4Cats,
+    assembly / mainClass := Some("io.renku.bench.Http4sMain"),
+    assembly / assemblyMergeStrategy := {
+      case "MANIFEST.MF"                           => MergeStrategy.discard
+      case "NOTICE"                                => MergeStrategy.discard
+      case "META-INF/io.netty.versions.properties" => MergeStrategy.first
+      case entry =>
+        val prev = (ThisBuild / assemblyMergeStrategy).value
+        prev(entry)
+    }
   )

@@ -66,6 +66,7 @@
                 buildInputs = [
                   pkgs.sbt
                   pkgs.openjdk
+                  pkgs.graalvm17-ce
                 ];
                 nativeBuildInputs =
                   [
