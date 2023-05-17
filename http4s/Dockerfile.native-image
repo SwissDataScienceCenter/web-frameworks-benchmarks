@@ -1,0 +1,35 @@
+FROM ghcr.io/graalvm/graalvm-ce:22 as builder
+
+WORKDIR /work
+
+COPY . .
+
+RUN microdnf install -y gzip
+RUN export PATH="/usr/local/sbt/bin:$PATH" && \
+    mkdir -p "/usr/local/sbt" && \
+    curl -sSL "https://github.com/sbt/sbt/releases/download/v1.8.3/sbt-1.8.3.tgz" | tar xz -C /usr/local/sbt --strip-components=1 && \
+    sbt "assembly"
+
+RUN gu install native-image
+RUN native-image --static \
+    --verbose \
+    --allow-incomplete-classpath \
+    --report-unsupported-elements-at-runtime \
+    --no-fallback \
+    -jar target/scala-3.2.2/http4s-test-app-assembly-0.0.1.jar http4s-graalvm-app
+
+FROM ghcr.io/graalvm/graalvm-ce:22
+
+WORKDIR /opt/http4s-test-app
+
+# Add artifacts from builder
+COPY --from=builder /work/http4s-graalvm-app .
+COPY --from=builder /work/target/scala-3.2.2/http4s-test-app-* .
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV TZ UTC
+
+RUN chmod 755 -R /opt/http4s-test-app/http4s*
+
+
+ENTRYPOINT ["/opt/http4s-test-app/http4s-graalvm-app"]

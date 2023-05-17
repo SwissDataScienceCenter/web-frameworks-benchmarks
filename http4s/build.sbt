@@ -59,6 +59,7 @@ val root = project
       case "MANIFEST.MF"                           => MergeStrategy.discard
       case "NOTICE"                                => MergeStrategy.discard
       case "META-INF/io.netty.versions.properties" => MergeStrategy.first
+      case "reference.conf" => MergeStrategy.concat
       case entry =>
         val prev = (ThisBuild / assemblyMergeStrategy).value
         prev(entry)

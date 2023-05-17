@@ -4,7 +4,7 @@ object Dependencies {
 
   object V {
     val scala3 = "3.2.2"
-    val http4s = "0.23.18"
+    val http4s = "0.23.19"
     val ciris = "3.1.0"
     val circe = "0.14.5"
     val betterMonadicFor = "0.3.1"

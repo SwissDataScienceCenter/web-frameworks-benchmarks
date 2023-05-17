@@ -1,0 +1,518 @@
+[
+{
+  "name":"[B"
+},
+{
+  "name":"[C"
+},
+{
+  "name":"[D"
+},
+{
+  "name":"[F"
+},
+{
+  "name":"[I"
+},
+{
+  "name":"[J"
+},
+{
+  "name":"[Lcats.parse.Parser0;"
+},
+{
+  "name":"[Lcats.parse.Parser;"
+},
+{
+  "name":"[Ljava.lang.String;"
+},
+{
+  "name":"[Ljavax.management.openmbean.CompositeData;"
+},
+{
+  "name":"[Lscala.util.Either;"
+},
+{
+  "name":"[S"
+},
+{
+  "name":"[Z"
+},
+{
+  "name":"cats.Later",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"cats.effect.metrics.CpuStarvation",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"cats.effect.metrics.CpuStarvationMBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"cats.effect.std.Semaphore$impl",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"cats.effect.unsafe.IORuntimeCompanionPlatform",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"cats.effect.unsafe.metrics.ComputePoolSampler",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.ComputePoolSamplerMBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.LiveFiberSnapshotTrigger",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.LiveFiberSnapshotTriggerMBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.LocalQueueSampler",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.LocalQueueSamplerMBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"cats.parse.Parser0",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"com.sun.management.GarbageCollectorMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.GcInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.HotSpotDiagnosticMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.ThreadMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.UnixOperatingSystemMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.VMOption",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.internal.GarbageCollectorExtImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.HotSpotDiagnostic",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.HotSpotThreadImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.OperatingSystemImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"fs2.Chunk$",
+  "fields":[{"name":"0bitmap$2"}]
+},
+{
+  "name":"fs2.internal.ScopedResource$$anon$1",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"fs2.io.net.Network$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"fs2.io.net.NetworkCompanionPlatform$$anon$1",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"io.circe.Encoder$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"io.renku.bench.EnvConfig$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"io.renku.bench.Http4sMain$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"io.renku.bench.Message$",
+  "fields":[{"name":"0bitmap$2"}]
+},
+{
+  "name":"io.renku.bench.Message$$anon$1",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"io.renku.bench.Routes",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"java.lang.Boolean",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Byte",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Character",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.ClassValue"
+},
+{
+  "name":"java.lang.Deprecated",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.Double",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Float",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Integer",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Long",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Short",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.StackTraceElement",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.String"
+},
+{
+  "name":"java.lang.Void",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.invoke.VarHandle",
+  "methods":[{"name":"releaseFence","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.management.BufferPoolMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.ClassLoadingMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.CompilationMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.LockInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.ManagementPermission",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.management.MemoryMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryManagerMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryPoolMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryUsage",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.MonitorInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.PlatformLoggingMXBean",
+  "queryAllPublicMethods":true,
+  "methods":[
+    {"name":"getLoggerLevel","parameterTypes":["java.lang.String"] }, 
+    {"name":"getLoggerNames","parameterTypes":[] }, 
+    {"name":"getParentLoggerName","parameterTypes":["java.lang.String"] }, 
+    {"name":"setLoggerLevel","parameterTypes":["java.lang.String","java.lang.String"] }
+  ]
+},
+{
+  "name":"java.lang.management.RuntimeMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.ThreadInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.math.BigDecimal"
+},
+{
+  "name":"java.math.BigInteger"
+},
+{
+  "name":"java.util.Date"
+},
+{
+  "name":"java.util.PropertyPermission",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String"] }]
+},
+{
+  "name":"java.util.logging.LogManager",
+  "methods":[{"name":"getLoggingMXBean","parameterTypes":[] }]
+},
+{
+  "name":"java.util.logging.LoggingMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"javax.management.MBeanOperationInfo",
+  "queryAllPublicMethods":true,
+  "methods":[{"name":"getSignature","parameterTypes":[] }]
+},
+{
+  "name":"javax.management.MBeanServerBuilder",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javax.management.ObjectName"
+},
+{
+  "name":"javax.management.openmbean.CompositeData"
+},
+{
+  "name":"javax.management.openmbean.OpenMBeanOperationInfoSupport"
+},
+{
+  "name":"javax.management.openmbean.TabularData"
+},
+{
+  "name":"jdk.management.jfr.ConfigurationInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.EventTypeInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.FlightRecorderMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.FlightRecorderMXBeanImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"jdk.management.jfr.RecordingInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.SettingDescriptorInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"org.http4s.Header$Raw$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"org.http4s.Headers$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"org.http4s.MediaType$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"org.http4s.MimeDB$text$",
+  "fields":[
+    {"name":"0bitmap$9"}, 
+    {"name":"1bitmap$5"}, 
+    {"name":"2bitmap$4"}, 
+    {"name":"3bitmap$4"}
+  ]
+},
+{
+  "name":"org.http4s.Platform$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"org.http4s.Uri$Path$",
+  "fields":[{"name":"0bitmap$2"}]
+},
+{
+  "name":"org.http4s.internal.parsing.CommonRules$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"org.typelevel.ci.package$CIStringSyntax",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.ANSI$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.ANSI$ctrl$",
+  "fields":[{"name":"0bitmap$3"}]
+},
+{
+  "name":"scribe.ANSI$fg$",
+  "fields":[{"name":"0bitmap$4"}]
+},
+{
+  "name":"scribe.ANSI$fx$",
+  "fields":[{"name":"0bitmap$5"}]
+},
+{
+  "name":"scribe.LogRecord",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.Logger",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.Logger$",
+  "fields":[{"name":"0bitmap$2"}]
+},
+{
+  "name":"scribe.Platform$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.Priority$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.cats$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.data.MDC$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.format.Formatter$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.format.package$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.message.LazyMessage",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.modify.LevelFilter$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"scribe.output.Color$Black$",
+  "fields":[{"name":"0bitmap$5"}]
+},
+{
+  "name":"scribe.output.Color$Blue$",
+  "fields":[{"name":"0bitmap$6"}]
+},
+{
+  "name":"scribe.output.Color$Cyan$",
+  "fields":[{"name":"0bitmap$7"}]
+},
+{
+  "name":"scribe.output.Color$Green$",
+  "fields":[{"name":"0bitmap$8"}]
+},
+{
+  "name":"scribe.output.ColoredOutput",
+  "fields":[{"name":"0bitmap$3"}]
+},
+{
+  "name":"scribe.output.CompositeOutput",
+  "fields":[{"name":"0bitmap$2"}]
+},
+{
+  "name":"scribe.output.LogOutput$",
+  "fields":[{"name":"0bitmap$1"}]
+},
+{
+  "name":"sun.management.ClassLoadingImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.CompilationImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.ManagementFactoryHelper$1",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.ManagementFactoryHelper$PlatformLoggingImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryManagerImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryPoolImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.RuntimeImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.misc.Signal",
+  "methods":[
+    {"name":"<init>","parameterTypes":["java.lang.String"] }, 
+    {"name":"handle","parameterTypes":["sun.misc.Signal","sun.misc.SignalHandler"] }
+  ]
+},
+{
+  "name":"sun.misc.SignalHandler"
+},
+{
+  "name":"sun.misc.Unsafe",
+  "allDeclaredFields":true
+}
+]
