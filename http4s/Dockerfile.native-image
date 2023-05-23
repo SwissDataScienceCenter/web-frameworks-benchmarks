@@ -24,12 +24,12 @@ WORKDIR /opt/http4s-test-app
 
 # Add artifacts from builder
 COPY --from=builder /work/http4s-graalvm-app .
-COPY --from=builder /work/target/scala-3.2.2/http4s-test-app-* .
+COPY --from=builder /work/target/scala-3.2.2/http4s-test-app-assembly-0.0.1.jar .
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV TZ UTC
 
 RUN chmod 755 -R /opt/http4s-test-app/http4s*
 
-
 ENTRYPOINT ["/opt/http4s-test-app/http4s-graalvm-app"]
+#ENTRYPOINT ["/opt/http4s-test-app/http4s-test-app-assembly-0.0.1.jar"]
