@@ -50,6 +50,22 @@ showed some variability in the results.
 * Express.js was used in Node.
 * Echo is the framework used in the Go tests
 
+----
+
+On Eike's MacBook (2.3Ghz QuadCore i7, 16G RAM) running Docker on MacOS (4CPU,
+8G RAM). Load tests outside of docker on the same machine. `vu=100, iterations=200`
+
+```
+Go:       avg=10ms    min=890.26µs med=9.07ms max=50.62ms p(90)=16.79ms p(95)=20.19ms
+Sanic:    avg=7.53ms  min=814.92µs med=6.83ms max=56.52ms p(90)=11.98ms p(95)=14.36ms
+Http4s:   avg=9.82ms  min=1.04ms med=6.1ms  max=1.28s  p(90)=11.31ms p(95)=13.78ms
+FastApi:  avg=59.33ms min=1.94ms med=56.92ms max=174.26ms p(90)=98.77ms p(95)=110.04ms
+Flask:    avg=167.46ms min=1.69ms med=25.46ms max=13.13s   p(90)=44.12ms p(95)=53.98ms
+Quart:    avg=50.14ms min=1.59ms med=47.31ms max=191ms    p(90)=90.07ms p(95)=103.08ms
+```
+
+Flask produced errors in 3 of 5 runs.
+
 ## Proxying (to Traefik or not to Traefik)
 
 This aims to answer the question of what happens if we do not use Traefik for proxying
@@ -106,3 +122,14 @@ Flask:          avg=10.12ms  min=1.97ms  med=9.41ms   max=18.11ms p(90)=15.59ms 
 Quart:          avg=40.11ms  min=2.11ms  med=48.86ms max=72.53ms p(90)=65.4ms   p(95)=66.61ms
 ```
 `Sanic(w4)` = with `--workers=4`, `Sanic` = with `--fast`
+
+
+On Eike's Macbook (see above, `vu=100, iterations=200`):
+
+```
+Go:      avg=20.94ms min=1.33ms med=19.77ms max=93.09ms p(90)=32.41ms p(95)=37.9ms
+Sanic:   avg=27.74ms min=1.72ms med=26.26ms max=88.71ms p(90)=41.75ms p(95)=45.15ms
+Http4s:  avg=16.13ms min=2.26ms med=12.6ms  max=1.18s  p(90)=21.47ms p(95)=24.98ms
+Flask:   avg=173.17ms min=2.9ms  med=82.97ms max=13.17s p(90)=101.83ms p(95)=107.6ms
+Quart:   avg=68.41ms min=2.38ms med=63.9ms  max=175.73ms p(90)=111.23ms p(95)=125.25ms
+```
