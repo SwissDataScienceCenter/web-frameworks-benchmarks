@@ -84,5 +84,15 @@ services:
     depends_on:
       - redis
       - redis-init
+  scalahttp4s:
+    env_file: .env
+    build:
+      context: http4s
+      dockerfile: Dockerfile
+    ports:
+      - '3009:8181'
+    depends_on:
+      - redis
+      - redis-init
 volumes:
   redis:
